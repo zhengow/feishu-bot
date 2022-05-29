@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-type zBot struct {
+type ZBot struct {
 	webhook string
 }
 
@@ -28,11 +28,11 @@ type zResp struct {
 	StatusMessage string `json:"StatusMessage"`
 }
 
-func NewBot(webhook string) *zBot {
-	return &zBot{webhook: webhook}
+func NewBot(webhook string) *ZBot {
+	return &ZBot{webhook: webhook}
 }
 
-func (b *zBot) sendText(text string) error {
+func (b *ZBot) sendText(text string) error {
 	p := &zParams{
 		MsgType: "text",
 		Content: zContent{
