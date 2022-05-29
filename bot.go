@@ -32,7 +32,7 @@ func NewBot(webhook string) *ZBot {
 	return &ZBot{webhook: webhook}
 }
 
-func (b *ZBot) sendText(text string) error {
+func (b *ZBot) SendText(text string) error {
 	p := &zParams{
 		MsgType: "text",
 		Content: zContent{
